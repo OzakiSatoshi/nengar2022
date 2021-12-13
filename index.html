@@ -2,16 +2,20 @@
 <html>
 <head>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FHGSF0F0XB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-FHGSF0F0XB');
-</script>
+  <!-- Global site tag (gtag.js) - Google Analytics 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FHGSF0F0XB"></script>
     
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'G-FHGSF0F0XB');
+    </script>
+  -->
+  
+
 <meta charset="utf-8">
 <!-- A-Frame ライブラリの読み込み※GIFはV0.9.0で動く -->
   <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
@@ -62,15 +66,17 @@
    <!-- GIFを表示 -->
    <!-- scale 右、上、？ -->
    <!-- position 右、空、上？ -->
-   <a-entity
-              scale="4.5 3 1"
-              position="1.2 0 0.5"
-              geometry="primitive: plane;"
-              material="shader:gif; src:#usi;
-              color:white;
-              opacity:1"
-              rotation="-90 0 0">
-   </a-entity>
+   <!--
+     <a-entity
+                scale="4.5 3 1"
+                position="1.2 0 0.5"
+                geometry="primitive: plane;"
+                material="shader:gif; src:#usi;
+                color:white;
+                opacity:1"
+                rotation="-90 0 0">
+     </a-entity>
+   -->
    
     <!-- 画像を表示 -->
      <!--<a-image id="usi" src="#usi" position="0 0 0" rotation="-90 0 0">
@@ -83,11 +89,3 @@
   </a-scene>
   </body>
 </html>
-
-
-
-
-
-
-    
- 

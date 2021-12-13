@@ -37,12 +37,14 @@
 <a-scene embedded arjs="debugUIEnabled:false;" vr-mode-ui="enabled: false">
         <!-- Assetの用意 -->  
         <!-- 3Dモデル -->
-        <a-asset-item id="ponkotsu" src="assets/ponkotsu.glb"></a-asset-item>
+        <a-asset-item id="nenga_tiger_run" src="assets/nenga_tiger_run.glb"></a-asset-item>
         </a-assets>
         <!-- gifファイル -->
-        <a-assets>
-          <img id="usi" src="/assets/usi.gif">
-        </a-assets>
+        <!-- 
+            <a-assets>
+            <img id="usi" src="/assets/usi.gif">
+            </a-assets> 
+        -->
 
 <!-- 『.patt』ファイルを読み込む -->
 <a-marker preset="custom" type="pattern" url="nenga.patt" >
@@ -52,7 +54,7 @@
 
    <!-- 3Dモデルを表示 -->
    <a-entity
-            gltf-model="#ponkotsu" 
+            gltf-model="#nenga_tiger_run" 
             scale="0.01 0.01 0.01" 
             animation-mixer>
   </a-entity>
@@ -79,9 +81,7 @@
   </a-marker>
   <a-entity camera></a-entity>
   </a-scene>
-  <script>
-
-    </body>
+  </body>
 </html>
 
 

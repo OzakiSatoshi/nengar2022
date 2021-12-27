@@ -50,13 +50,8 @@
             </a-assets> 
         -->
 <!-- サウンド設定 -->
-<a-scene>
-  <a-assets>
-    <audio id="oumi" src="assets/oumi.mp3" preload="auto"></audio>
-  </a-assets>
-
-  <a-entity sound="src: #oumi"></a-entity>
-</a-scene>
+<a-entity id="river" geometry="primitive: plane" material="color: blue"
+          position="-10 0 0" sound="src: assets/oumi.mp3; autoplay: true"></a-entity>
 
 <!-- 『.patt』ファイルを読み込む -->
 <a-marker preset="custom" type="pattern" url="nenga.patt" >

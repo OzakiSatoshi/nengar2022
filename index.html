@@ -65,8 +65,7 @@
    <a-entity
             gltf-model="#torausi" 
             scale="0.2 0.2 0.2" 
-            animation-mixer
-            >
+            animation-mixer>
           </a-entity>
 
    <!-- GIFを表示 -->
@@ -94,5 +93,27 @@
   <a-entity camera></a-entity>
 
   </a-scene>
+  <script>
+    "use strict";
+
+    // Window
+    window.onload = (e)=>{
+      //console.log("onload!!");
+      const scene = document.querySelector("a-scene");
+
+      const sound01 = document.getElementById("my_sound01");
+      const btn01 = document.getElementById("my_btn01");
+      btn01.addEventListener("click", (e)=>{
+        const sound = sound01.components.sound;
+        if(sound.isPlaying){
+          sound.pauseSound();
+          e.target.setAttribute("src", "#img_pause");
+        }else{
+          sound.playSound();
+          e.target.setAttribute("src", "#img_play");
+        }
+      });
+    }
+  </script>
   </body>
 </html>

@@ -43,9 +43,9 @@
         <!-- 3Dモデル -->
         <a-asset-item id="torausi" src="assets/torausi.glb"></a-asset-item>
         <!-- サウンド設定 -->
-        <a-assets>
+        <!-- <a-assets>
           <audio id="oumi" src="assets/oumi.mp3"></audio>
-        </a-assets>
+        </a-assets> -->
         
         
         <!-- gifファイル -->
@@ -59,7 +59,7 @@
   <a-marker preset="custom" type="pattern" url="nenga.patt" >
     
     <a-animation attribute="position" to="0 0 0" direction="alternate" dur="1000" repeat="indefinite" easing="linear"></a-animation>
-    <!-- <a-sound src="#oumi" autoplay="false" position="0 1.25 -5" volume="1" loop="true"></a-sound> -->
+    <a-sound src="#oumi" autoplay="false" position="0 1.25 -5" volume="1" loop="true"></a-sound>
 
    <!-- 3Dモデルを表示 -->
    <a-entity

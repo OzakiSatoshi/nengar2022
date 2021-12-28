@@ -93,21 +93,5 @@
   <a-entity camera></a-entity>
 </a-assets>
   </a-scene>
-
-  <!-- 音声再生 -->
-  <script>
-    AFRAME.registerComponent('soundhandler', {
-        tick: function () {
-               var entity = document.querySelector('[sound]');
-             if (document.querySelector('a-marker').object3D.visible == true) {
-                entity.components.sound.playSound();
-            } else {
-                entity.components.sound.pauseSound();
-            }
-    
-         }
-    });
-  </script>
-
   </body>
 </html>

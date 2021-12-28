@@ -44,7 +44,7 @@
         <a-asset-item id="torausi" src="assets/torausi.glb"></a-asset-item>
         <!-- サウンド設定 -->
         <a-assets>
-          <audio id="sound" src="assets/oumi.mp3" preload="auto"></audio>
+          <audio id="#sound" src="assets/oumi.mp3" preload="auto"></audio>
         </a-assets>
        
         <!-- gifファイル -->
@@ -64,7 +64,8 @@
    <a-entity
             gltf-model="#torausi" 
             scale="0.2 0.2 0.2" 
-            animation-mixer>
+            animation-mixer
+            sound="src:#sound">
   </a-entity>
 
    <!-- GIFを表示 -->

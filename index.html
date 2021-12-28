@@ -31,83 +31,39 @@
 <title>Qukuri年賀AR</title>
 </head>
 
-<body style="margin : 0px; overflow: hidden">
+  <body style="margin : 0px; overflow: hidden">
 
-<body>
-  <div class="arjs-loader">
-  </div>
+  <body>
+    <div class="arjs-loader"></div>
 
-<!-- デバッグ用の画面表示、VR用のボタンをそれぞれ非表示に -->
-<a-scene embedded arjs="debugUIEnabled:false;" vr-mode-ui="enabled: false">
-        <!-- Assetの用意 -->  
-        <!-- 3Dモデル -->
-        <a-asset-item id="torausi" src="assets/torausi.glb"></a-asset-item>
-        <!-- サウンド設定 -->
-        <a-scene>
-          <a-sound src="src: url(assets/oumi.mp3)" autoplay="true" position="0 2 5"></a-sound>
-        </a-scene>
-       
-        <!-- gifファイル -->
-        <!-- 
-            <a-assets>
-            <img id="usi" src="/assets/usi.gif">
-            </a-assets> 
-        -->
+  <!-- デバッグ用の画面表示、VR用のボタンをそれぞれ非表示に -->
+  <a-scene embedded arjs="debugUIEnabled:false;" vr-mode-ui="enabled: false">
+          <!-- Assetの用意 -->  
+          <!-- 3Dモデル -->
+          <a-asset-item id="torausi" src="assets/torausi.glb"></a-asset-item>
+          <!-- サウンド設定 -->
+          <a-scene>
+            <a-sound src="src: url(assets/oumi.mp3)" autoplay="true" position="0 2 5"></a-sound>
+          </a-scene>
+        
+    <!-- 『.patt』ファイルを読み込む -->
+    <a-marker preset="custom" type="pattern" url="nenga.patt" >
+      
+      <a-animation attribute="position" to="0 0 0" direction="alternate" dur="1000" repeat="indefinite" easing="linear" soundhandler>
+      </a-animation>
 
-<!-- 『.patt』ファイルを読み込む -->
-<a-marker preset="custom" type="pattern" url="nenga.patt" >
-   
-   <a-animation attribute="position" to="0 0 0" direction="alternate" dur="1000" repeat="indefinite" easing="linear" soundhandler>
-   </a-animation>
-
-   <!-- 3Dモデルを表示 -->
-   <a-entity
-            gltf-model="#torausi" 
-            scale="0.2 0.2 0.2" 
-            animation-mixer>
-  </a-entity>
-
-   <!-- GIFを表示 -->
-   <!-- scale 右、上、？ -->
-   <!-- position 右、空、上？ -->
-   <!--
-     <a-entity
-                scale="4.5 3 1"
-                position="1.2 0 0.5"
-                geometry="primitive: plane;"
-                material="shader:gif; src:#usi;
-                color:white;
-                opacity:1"
-                rotation="-90 0 0">
-     </a-entity>
-   -->
-   
-    <!-- 画像を表示 -->
-     <!--<a-image id="usi" src="#usi" position="0 0 0" rotation="-90 0 0">
-       <a-animation attribute="position" to="0 0 0" direction="alternate" dur="1000" repeat="indefinite" easing="linear">
-       </a-animation>
-     </a-image> -->
+      <!-- 3Dモデルを表示 -->
+      <a-entity
+                gltf-model="#torausi" 
+                scale="0.2 0.2 0.2" 
+                animation-mixer>
+      </a-entity>
+    </a-marker>
     
-  </a-marker>
-  <a-entity sound="src: #sound" autoplay="false"></a-entity>
-  <a-entity camera></a-entity>
-</a-assets>
+    <a-entity id="sound" geometry="primitive: plane" material="color: blue"
+    position="-10 0 0" sound="src: url(assets/oumi.mp3); autoplay: true"></a-entity> 
+    <a-entity camera></a-entity>
+    </a-assets>
   </a-scene>
-
-  <!-- 音声再生 -->
-  <script>
-    AFRAME.registerComponent('soundhandler', {
-        tick: function () {
-               var entity = document.querySelector('[sound]');
-             if (document.querySelector('a-marker').object3D.visible == true) {
-                entity.components.sound.playSound();
-            } else {
-                entity.components.sound.pauseSound();
-            }
-    
-         }
-    });
-  </script>
-
   </body>
 </html>

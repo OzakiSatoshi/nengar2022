@@ -94,24 +94,6 @@
 
   </a-scene>
   
-  <p class="btn"><a onclick="sound()">クリック</a></p>
-  <audio id="sound" preload="auto">
-      <source src="assets/oumi.mp3" type="audio/mp3">
-  </audio>  
-
-  <script>
-        (function (window, $) {
-      'use strict';
-      $.fn.useSound = function (_event, _id) {
-        var se = $(_id);
-        this.on(_event, function(){
-          se[0].currentTime = 0;
-          se[0].play();
-        });
-        return this;
-      };
-    })(this, this.jQuery);
-    $('.btn a').useSound('mousedown touchstart', '#sound');
-  </script>
+  
   </body>
 </html>

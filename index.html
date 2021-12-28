@@ -44,8 +44,9 @@
         <a-asset-item id="torausi" src="assets/torausi.glb"></a-asset-item>
         <!-- サウンド設定 -->
         <a-assets>
-          <audio id="sound" src="assets/oumi.mp3"></audio>
+          <audio id="oumi" src="assets/oumi.mp3"></audio>
         </a-assets>
+        <a-sound src="src: #oumi" autoplay="true" position="0 1.25 -5" volume="1" loop="true"></a-sound>
        
         <!-- gifファイル -->
         <!-- 
@@ -68,7 +69,6 @@
           </a-entity>
 
   </a-entity>
-  <a-sound src="src: url(assets/oumi.mp3)" autoplay="true" position="0 1.25 -5" volume="1" loop="true"></a-sound>
 
    <!-- GIFを表示 -->
    <!-- scale 右、上、？ -->

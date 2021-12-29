@@ -37,13 +37,7 @@
   <div class="arjs-loader">
   </div>
 
-<div class="overlay">
-  <div class="window">
-    <input type="checkbox" name="checkbox">
-    <h2>音声スタート</h2>
-    <audio type="audio/mpeg" src="assets/oumi.mp3" controls></audio>
-  </div>
-</div>
+
 
 <!-- デバッグ用の画面表示、VR用のボタンをそれぞれ非表示に -->
 <a-scene embedded arjs="debugUIEnabled:false;" vr-mode-ui="enabled: false">
@@ -103,7 +97,11 @@
   <a-entity camera></a-entity>
 
   </a-scene>
-  
+
+  <div>
+    <h2>音声スタート</h2>
+    <audio type="audio/mpeg" src="assets/oumi.mp3" controls></audio>
+  </div>
   
   </body>
 </html>

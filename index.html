@@ -34,7 +34,7 @@
 <body style="margin : 0px; overflow: hidden">
 
 <div id="controls">
-  <audio id="audio" type="audio/mpeg" src="assets/oumi.mp3" controls></audio>
+  <audio id="audio" type="audio/mpeg" src="assets/harunoumi.mp3" controls></audio>
 </div>
 
 <body>
@@ -47,7 +47,7 @@
 <a-scene embedded arjs="debugUIEnabled:false;" vr-mode-ui="enabled: false">
         <!-- Assetの用意 -->  
         <!-- 3Dモデル -->
-        <a-asset-item id="torausi" src="assets/torausi.glb"></a-asset-item>
+        <a-asset-item id="torausiozaki" src="assets/torausiozaki.glb"></a-asset-item>
         <!-- <a-asset-item id="oumi" src="assets/oumi.mp3"></a-asset-item> -->
         <!-- サウンド設定 -->
         <!-- <a-assets>
@@ -70,10 +70,9 @@
 
    <!-- 3Dモデルを表示 -->
    <a-entity
-            gltf-model="#torausi" 
+            gltf-model="#torausiozaki" 
             scale="0.2 0.2 0.2" 
-            animation-mixer
-            sound="#oumi">
+            animation-mixer>
           </a-entity>
 
    <!-- GIFを表示 -->
